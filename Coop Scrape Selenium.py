@@ -1,45 +1,49 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from bs4 import BeautifulSoup
+import csv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from time import sleep
 import selenium
+import time
 
+# initialize browser, --incognito for cache/cookies
 option = webdriver.ChromeOptions()
 option.add_argument("— incognito")
-
 un = "216390064"
-pw = "peepeepoopoo"
+pw = "peepeepoopoo" #this isnt my password anymore i swear
 
-browser = webdriver.Chrome(executable_path=r"C:/bin/chromedriver.exe", options=option)
 
-web_url = "https://lassondecoop.com/student/login.htm"
 
-browser.get(web_url)
+# replace 'C:/bin/chromedriver.exe' to where chromedriver is installed on your system
+browser = webdriver.Chrome(executable_path='C:/bin/chromedriver.exe', options=option)
+browser.get("https://lassondecoop.com/student/login.htm")
 
-usernameBox=browser.find_element_by_xpath("//*[@id=\"j_username\"]")
+browser.implicitly_wait(4)
+# Enter username and password
+usernameBox=browser.find_element_by_xpath('//*[@id=\"j_username\"]')
 usernameBox.click()
 usernameBox.send_keys(un)
 
-passwordBox=browser.find_element_by_xpath("//*[@id=\"j_password\"]")
+passwordBox=browser.find_element_by_xpath('//*[@id=\"j_password\"]')
 passwordBox.click()
 passwordBox.send_keys(pw + Keys.RETURN)
 
+# go to job board
 browser.implicitly_wait(4)
-
-browser.navigate().to('https://lassondecoop.com/myAccount/coop-postings.htm')
-
-
-# browser.find_element_by_xpath("//*[@id=\"loginForm\"]/div[3]/input").click()
-
-# wait
-
-# browser.implicitly_wait(5)
-
-# browser.find_element_by_xpath('/html/body/div[3]/div[2]/div[1]/div/ul/li[10]/a').click()
+browser.get('https://lassondecoop.com/myAccount/coop-postings.htm')
+#jobBoardButton=browser.find_element_by_xpath('//*[@id="dashboard"]/div[4]/div[1]/div[2]/div/div/a[1]')
+#jobBoardButton.click()
 
 
-# usernameBox = browser.find_element_by_id('box')
-# usernameBox.send_keys('python')
+time.sleep(5)
+browser.implicitly_wait(4)
+# parse html table and save to csv
+#with open('page.html', 'w') as f:
+#    f.write(browser.page_source)
+
+# edits: change pages? //*[@id="posting9622"]/td[1]/a[1]
+browser.find_element_by_xpath('/html/body/div[3]/div[2]/div[2]/div[4]/div/div/div/div/div[4]/div[1]/div[2]/div/div/a[1]').click();
