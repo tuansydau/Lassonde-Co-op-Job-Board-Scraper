@@ -1,0 +1,95 @@
+orbisApp.validateOpts = {
+	focusInvalid : false,
+	ignore : [],
+	invalidHandler: function(form, validator) {
+		
+        if (!validator.numberOfInvalids())
+            return;
+
+        $('html, body').animate({
+            scrollTop: parseInt($(validator.errorList[0].element).offset().top) - 20
+        }, 1000);
+    },
+	highlight: function(element, errorClass) {
+        $(element).parents(".control-group:first").addClass("error");
+	},
+	unhighlight: function(element, errorClass) {
+		$(element).parents(".control-group:first").removeClass("error");
+		if($(element).data("tooltip") || $(element).parents(".inputContainer:first").data("tooltip"))
+		{
+			if($(element).parents(".inputContainer:first").length != 0)
+			{
+				$(element).parents(".inputContainer:first").parent().removeClass("hasJQValidateError");
+				$(element).parents(".inputContainer:first").tooltip("destroy");
+			}
+			else
+			{
+				$(element).parent().removeClass("hasJQValidateError");
+				$(element).tooltip("destroy");
+			}
+		}
+	},
+	onfocusout : function(element){
+		if($(element).parents("form").validate().element(element))
+		{
+			if($(element).parents(".inputContainer:first").length != 0)
+			{
+				$(element).parents(".inputContainer:first").parent().removeClass("hasJQValidateError");
+				$(element).parents(".inputContainer:first").tooltip("destroy");
+			}
+			else
+			{
+				$(element).parent().removeClass("hasJQValidateError");
+				$(element).tooltip("destroy");
+			}
+		}
+	},
+	tooltipPlacement : "right",
+	onkeyup : false,
+	errorPlacement: function(error, element) {
+		if(!element.parent().is(".hasJQValidateError"))
+		{
+			var tooltipPlacement = $(this)[0].tooltipPlacement;
+			var tooltipElement = null;
+			element.attr("role", "alert");
+			
+			if(element.data("tooltipElement"))
+			{
+				tooltipElement = eval(element.data("tooltipElement"));
+			}
+			else if(element.parents(".inputContainer:first").length != 0)
+			{
+				tooltipElement = element.parents(".inputContainer:first");
+			}
+			else
+			{
+				tooltipElement = element;
+			}
+			
+			if(tooltipElement.data("tooltipPlacement"))
+			{
+				tooltipPlacement = tooltipElement.data("tooltipPlacement");
+			}
+			
+			if(element.data("tooltipPlacement"))
+			{
+				tooltipPlacement = $(element).data("tooltipPlacement");
+			}
+			
+			var tooltipProperties = {
+	    		trigger : "manual",
+	    		placement : tooltipPlacement,
+	    		html : true,
+	    		title : error.html()
+	    	};
+
+			tooltipElement.parent().addClass("jqueryValidateError hasJQValidateError");
+			tooltipElement.tooltip(tooltipProperties);
+			tooltipElement.tooltip("show");	
+		}
+    },
+    submitHandler: function(form) {  
+
+        form.submit();
+    }
+};
