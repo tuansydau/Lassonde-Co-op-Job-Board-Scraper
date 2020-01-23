@@ -11,6 +11,7 @@ import time
 # initialize browser, --incognito for cache/cookies
 option = webdriver.ChromeOptions()
 option.add_argument("— incognito")
+
 un = "216390064"
 pw = "***********" #this isnt my password anymore i swear
 
@@ -18,15 +19,16 @@ pw = "***********" #this isnt my password anymore i swear
 browser = webdriver.Chrome(executable_path='C:/bin/chromedriver.exe', options=option)
 browser.get("https://lassondecoop.com/student/login.htm")
 
-browser.implicitly_wait(4)
-# Enter username and password
-usernameBox=browser.find_element_by_xpath('//*[@id=\"j_username\"]')
-usernameBox.click()
-usernameBox.send_keys(un)
+time.sleep(10)
 
-passwordBox=browser.find_element_by_xpath('//*[@id=\"j_password\"]')
-passwordBox.click()
-passwordBox.send_keys(pw + Keys.RETURN)
+# Enter username and password
+#usernameBox=browser.find_element_by_xpath('//*[@id=\"j_username\"]')
+#usernameBox.click()
+#usernameBox.send_keys(un)
+
+#passwordBox=browser.find_element_by_xpath('//*[@id=\"j_password\"]')
+#passwordBox.click()
+#passwordBox.send_keys(pw + Keys.RETURN)
 
 # go to job board
 browser.get('https://lassondecoop.com/myAccount/coop-postings.htm')
@@ -39,22 +41,35 @@ time.sleep(5)
 # edits: change pages? //*[@id="posting9622"]/td[1]/a[1]
 browser.find_element_by_xpath('/html/body/div[3]/div[2]/div[2]/div[4]/div/div/div/div/div[4]/div[1]/div[2]/div/div/a[1]').click()
 
+#page 1
 content = browser.page_source
-
 with open('webpage.html', 'w') as f:
     f.write(content)
-
 tables = pd.read_html('webpage.html') # Returns list of all tables on page
-print(tables[0])
+jobTable=tables[1].drop(['Position Type', 'Unnamed: 5' , 'Unnamed: 6'], axis=1) #refine table
+print(jobTable)
+jobTable.to_csv(r'C:\Users\tukau\Desktop\datasets\CoopScrape\jobs.csv', index='False')
+browser.find_element_by_xpath('//*[@id="postingsTablePlaceholder"]/div/div/div/ul/li[3]/a').click()
+
+# page 2
+content = browser.page_source
+with open('webpage.html', 'w') as f:
+    f.write(content)
+tables = pd.read_html('webpage.html', headers='False') # Returns list of all tables on page
+jobTable=tables[1].drop(['Position Type', 'Unnamed: 5' , 'Unnamed: 6'], axis=1) #refine table
+print(jobTable)
+jobTable.to_csv(r'C:\Users\tukau\Desktop\datasets\CoopScrape\jobs.csv', mode='a', index='False')
+browser.find_element_by_xpath('//*[@id="postingsTablePlaceholder"]/div/div/div/ul/li[4]/a').click()
+
+# page 3
+content = browser.page_source
+with open('webpage.html', 'w') as f:
+    f.write(content)
+tables = pd.read_html('webpage.html', headers='False') # Returns list of all tables on page
+jobTable=tables[1].drop(['Position Type', 'Unnamed: 5' , 'Unnamed: 6'], axis=1) #refine table
+print(jobTable)
+jobTable.to_csv(r'C:\Users\tukau\Desktop\datasets\CoopScrape\jobs.csv', mode='a', index='False')
+
 
 # page 2 - //*[@id="postingsTablePlaceholder"]/div/div/div/ul/li[3]/a
 # page 3 - //*[@id="postingsTablePlaceholder"]/div/div/div/ul/li[4]/a
-
-
-# headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
-# url = "https://en.wikipedia.org/wiki/List_of_national_capitals"
-# r = requests.get(url, headers=headers)
-# soup = BeautifulSoup(r.content, "html.parser")
-# table = soup.find_all('table')[1]
-# rows = table.find_all('tr')
-# row_list = list()

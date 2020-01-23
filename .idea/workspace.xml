@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="917bba57-69c7-4896-b24d-79c34be9103e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/htmlParse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saveHTML.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coop Scrape Selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/Coop Scrape Selenium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jobs.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Coop Scrape Selenium.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="41" selection-start-line="41" selection-end-line="44" selection-end-column="20" />
+            <state relative-caret-position="242">
+              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -27,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saveHTML.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmlParse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="10" selection-end-line="15" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -57,8 +70,9 @@
         <option value="$PROJECT_DIR$/CoopScrape.py" />
         <option value="$PROJECT_DIR$/coopScrape/Coop Scrape Selenium.py" />
         <option value="$PROJECT_DIR$/coopScrape/src/Coop Scrape Selenium.py" />
-        <option value="$PROJECT_DIR$/Coop Scrape Selenium.py" />
+        <option value="$PROJECT_DIR$/saveHTML.py" />
         <option value="$PROJECT_DIR$/htmlParse.py" />
+        <option value="$PROJECT_DIR$/Coop Scrape Selenium.py" />
       </list>
     </option>
   </component>
@@ -115,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.htmlParse">
+  <component name="RunManager" selected="Python.Coop Scrape Selenium (2)">
     <configuration name="Coop Scrape Selenium (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CoopScrape" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,27 +193,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CoopScrape" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="CoopScrape" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\tukau\Desktop\datasets\CoopScrape\coopScrape\src\CoopScrape.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="htmlParse" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CoopScrape" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,13 +214,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="saveHTML" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CoopScrape" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/saveHTML.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.htmlParse" />
         <item itemvalue="Python.Coop Scrape Selenium (2)" />
+        <item itemvalue="Python.htmlParse" />
+        <item itemvalue="Python.saveHTML" />
         <item itemvalue="Python.Coop Scrape Selenium (1)" />
         <item itemvalue="Python.Coop Scrape Selenium" />
-        <item itemvalue="Python.CoopScrape" />
       </list>
     </recent_temporary>
   </component>
@@ -273,16 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Coop Scrape Selenium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" selection-start-line="41" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python38/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -290,12 +294,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#19203#19208#0" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#29777#29783#0" expanded="true" />
+            <element signature="e#29863#29869#0" expanded="true" />
+            <element signature="e#29869#29875#0" expanded="true" />
+            <element signature="e#29875#29881#0" expanded="true" />
+            <element signature="e#29881#29887#0" expanded="true" />
+            <element signature="e#29916#29922#0" expanded="true" />
+            <element signature="e#30027#30033#0" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#32826#32831#0" expanded="true" />
+            <element signature="e#34191#34230#0" expanded="true" />
+            <element signature="e#36179#36218#0" expanded="true" />
+            <element signature="e#38117#38156#0" expanded="true" />
+            <element signature="e#40058#40097#0" expanded="true" />
+            <element signature="e#41969#42008#0" expanded="true" />
+            <element signature="e#43869#43908#0" expanded="true" />
+            <element signature="e#45741#45780#0" expanded="true" />
+            <element signature="e#47686#47725#0" expanded="true" />
+            <element signature="e#49637#49676#0" expanded="true" />
+            <element signature="e#51579#51618#0" expanded="true" />
+            <element signature="e#53520#53559#0" expanded="true" />
+            <element signature="e#55465#55504#0" expanded="true" />
+            <element signature="e#57410#57449#0" expanded="true" />
+            <element signature="e#57975#57980#0" expanded="true" />
+            <element signature="e#59384#59423#0" expanded="true" />
+            <element signature="e#61336#61375#0" expanded="true" />
+            <element signature="e#63269#63308#0" expanded="true" />
+            <element signature="e#65163#65202#0" expanded="true" />
+            <element signature="e#67091#67130#0" expanded="true" />
+            <element signature="e#68952#68991#0" expanded="true" />
+            <element signature="e#70871#70910#0" expanded="true" />
+            <element signature="e#72786#72825#0" expanded="true" />
+            <element signature="e#74708#74747#0" expanded="true" />
+            <element signature="e#76638#76677#0" expanded="true" />
+            <element signature="e#78556#78595#0" expanded="true" />
+            <element signature="e#80527#80566#0" expanded="true" />
+            <element signature="e#82469#82508#0" expanded="true" />
+            <element signature="e#83013#83018#0" expanded="true" />
+            <element signature="e#84421#84460#0" expanded="true" />
+            <element signature="e#87664#87703#0" expanded="true" />
+            <element signature="e#89489#89528#0" expanded="true" />
+            <element signature="e#91335#91374#0" expanded="true" />
+            <element signature="e#93171#93210#0" expanded="true" />
+            <element signature="e#95004#95043#0" expanded="true" />
+            <element signature="e#96837#96876#0" expanded="true" />
+            <element signature="e#98660#98699#0" expanded="true" />
+            <element signature="e#100452#100491#0" expanded="true" />
+            <element signature="e#102241#102280#0" expanded="true" />
+            <element signature="e#104099#104138#0" expanded="true" />
+            <element signature="e#105959#105998#0" expanded="true" />
+            <element signature="e#107799#107838#0" expanded="true" />
+            <element signature="e#109636#109675#0" expanded="true" />
+            <element signature="e#111478#111517#0" expanded="true" />
+            <element signature="e#113329#113368#0" expanded="true" />
+            <element signature="e#115168#115207#0" expanded="true" />
+            <element signature="e#117001#117040#0" expanded="true" />
+            <element signature="e#118868#118907#0" expanded="true" />
+            <element signature="e#120718#120757#0" expanded="true" />
+            <element signature="e#122640#122679#0" expanded="true" />
+            <element signature="e#124588#124627#0" expanded="true" />
+            <element signature="e#126551#126590#0" expanded="true" />
+            <element signature="e#127117#127122#0" expanded="true" />
+            <element signature="e#128537#128576#0" expanded="true" />
+            <element signature="e#130486#130525#0" expanded="true" />
+            <element signature="e#132433#132472#0" expanded="true" />
+            <element signature="e#134380#134419#0" expanded="true" />
+            <element signature="e#134889#134894#0" expanded="true" />
+            <element signature="e#136265#136304#0" expanded="true" />
+            <element signature="e#138096#138135#0" expanded="true" />
+            <element signature="e#139950#139989#0" expanded="true" />
+            <element signature="e#141789#141828#0" expanded="true" />
+            <element signature="e#143555#143594#0" expanded="true" />
+            <element signature="e#145410#145449#0" expanded="true" />
+            <element signature="e#147272#147311#0" expanded="true" />
+            <element signature="e#149133#149172#0" expanded="true" />
+            <element signature="e#151013#151052#0" expanded="true" />
+            <element signature="e#152853#152892#0" expanded="true" />
+            <element signature="e#154721#154760#0" expanded="true" />
+            <element signature="e#156564#156603#0" expanded="true" />
+            <element signature="e#158425#158464#0" expanded="true" />
+            <element signature="e#160283#160322#0" expanded="true" />
+            <element signature="e#162142#162181#0" expanded="true" />
+            <element signature="e#164005#164044#0" expanded="true" />
+            <element signature="e#165880#165919#0" expanded="true" />
+            <element signature="e#167745#167784#0" expanded="true" />
+            <element signature="e#169606#169645#0" expanded="true" />
+            <element signature="e#171413#171452#0" expanded="true" />
+            <element signature="e#173273#173312#0" expanded="true" />
+            <element signature="e#175147#175186#0" expanded="true" />
+            <element signature="e#177006#177045#0" expanded="true" />
+            <element signature="e#178786#178825#0" expanded="true" />
+            <element signature="e#180619#180658#0" expanded="true" />
+            <element signature="e#182455#182494#0" expanded="true" />
+            <element signature="e#184284#184323#0" expanded="true" />
+            <element signature="e#186228#186267#0" expanded="true" />
+            <element signature="e#188167#188206#0" expanded="true" />
+            <element signature="e#188736#188741#0" expanded="true" />
+            <element signature="e#190137#190176#0" expanded="true" />
+            <element signature="e#192013#192052#0" expanded="true" />
+            <element signature="e#193956#193995#0" expanded="true" />
+            <element signature="e#195898#195937#0" expanded="true" />
+            <element signature="e#197771#197810#0" expanded="true" />
+            <element signature="e#199704#199743#0" expanded="true" />
+            <element signature="e#201637#201676#0" expanded="true" />
+            <element signature="e#203571#203610#0" expanded="true" />
+            <element signature="e#205501#205540#0" expanded="true" />
+            <element signature="e#207431#207470#0" expanded="true" />
+            <element signature="e#209362#209401#0" expanded="true" />
+            <element signature="e#211285#211324#0" expanded="true" />
+            <element signature="e#213208#213247#0" expanded="true" />
+            <element signature="e#215132#215171#0" expanded="true" />
+            <element signature="e#217069#217108#0" expanded="true" />
+            <element signature="e#219006#219045#0" expanded="true" />
+            <element signature="e#220944#220983#0" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#222968#222974#0" expanded="true" />
+            <element signature="e#222974#222980#0" expanded="true" />
+            <element signature="e#222981#222987#0" expanded="true" />
+            <element signature="e#222987#222993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveHTML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htmlParse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="10" selection-end-line="15" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coop Scrape Selenium.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
