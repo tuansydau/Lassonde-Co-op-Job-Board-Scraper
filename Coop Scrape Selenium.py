@@ -12,8 +12,8 @@ import time
 option = webdriver.ChromeOptions()
 option.add_argument("— incognito")
 
-un = "216390064"
-pw = "***********" #this isnt my password anymore i swear
+un = "Redacted"
+pw = "Redacted" 
 
 # replace 'C:/bin/chromedriver.exe' to where chromedriver is installed on your system
 browser = webdriver.Chrome(executable_path='C:/bin/chromedriver.exe', options=option)
