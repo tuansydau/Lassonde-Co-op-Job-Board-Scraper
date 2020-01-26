@@ -22,3 +22,4 @@ Known bugs:
 - Will not work if the number of pages of job postings is not equal to 3
 - ID of final jobs.csv file is not accurate
 - Not fully automated (scrolling input is required)
+- Jobs that start with N, E, or W will have their first letter removed (due to incorrect string parsing)
