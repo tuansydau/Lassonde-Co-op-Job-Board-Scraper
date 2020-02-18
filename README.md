@@ -17,9 +17,3 @@ How to use:
 3. Scroll down when browser first loads to login screen, scroll down so that username and password box are in view.
 4. When the browser loads the "Co-op Postings" page, scroll down so that the "All Job Postings" button is in view.
 5. Jobs will be saved in a .csv
-
-Known bugs:
-- Will not work if the number of pages of job postings is not equal to 3
-- ID of final jobs.csv file is not accurate
-- Not fully automated (scrolling input is required)
-- Jobs that start with N, E, or W will have their first letter removed (due to incorrect string parsing)
